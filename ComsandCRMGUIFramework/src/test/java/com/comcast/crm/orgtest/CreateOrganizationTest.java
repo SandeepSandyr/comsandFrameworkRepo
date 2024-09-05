@@ -16,18 +16,18 @@ public class CreateOrganizationTest extends Baseclass {
 
 	@Test(groups = "smokeTest")
 	public void createOrgTest() throws Throwable {
-		UtilityClassObject.getTest().log(Status.INFO, "read data from Excel");
+		//UtilityClassObject.getTest().log(Status.INFO, "read data from Excel");
 		String orgName = eu.getDataFromExcel("org", 1, 2) + ju.getRandomNumber();
 
-		UtilityClassObject.getTest().log(Status.INFO, "Navigate to Org Page");
+		//UtilityClassObject.getTest().log(Status.INFO, "Navigate to Org Page");
 		HomePage hp = new HomePage(driver);
 		hp.getOrgLink().click();
 
-		UtilityClassObject.getTest().log(Status.INFO, "Navigate to Create Org Page");
+		//UtilityClassObject.getTest().log(Status.INFO, "Navigate to Create Org Page");
 		OrganizationsPage op = new OrganizationsPage(driver);
 		op.getCreateOrgLink().click();
 
-		UtilityClassObject.getTest().log(Status.INFO, "Create Org");
+		//UtilityClassObject.getTest().log(Status.INFO, "Create Org");
 		CreateNewOrganizationPage cnop = new CreateNewOrganizationPage(driver);
 		cnop.createOrg(orgName);
 

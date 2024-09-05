@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 //import org.testng.annotations.Parameters;
+import org.testng.annotations.Listeners;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -27,6 +28,7 @@ import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.LoginPage;
 
+@Listeners(com.comcast.crm.listnerutility.ListenerImplement.class)
 public class Baseclass {
 	
 	public DataBaseUtility du = new DataBaseUtility();
